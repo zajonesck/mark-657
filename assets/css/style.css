@@ -423,7 +423,7 @@ body {
 }
 
 .about-banner {
-  background-color: var(--independence);
+  /* background-color: var(--independence); */
   border-radius: var(--radius-10);
   margin-block-end: 30px;
 }
@@ -1035,7 +1035,7 @@ textarea.contact-input {
   .abs-img {
     width: 250px;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: inherit;
     bottom: -150px;
     left: -100px;
