@@ -83,26 +83,40 @@
 /*-----------------------------------*\
   #Timer
 \*-----------------------------------*/
-#timer {
-  color: hsl(0, 0%, 100%);
+.countdown {
+  background-color: var(--midnight-blue);
+  padding: 20px 0; /* Reduced padding for a smaller overall size */
+  border-radius: var(--radius-15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
+.countdown-title {
+  font-size: 1.8rem; /* Adjusted for a smaller size */
+  color: var(--white);
+  margin-bottom: 15px; /* Reduced margin */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#timer {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Adjust the space between the elements as needed */
+  gap: 15px; /* Reduced gap for a more compact look */
+  border-radius: var(--radius-10);
+  margin: auto;
+  max-width: 500px; /* Adjusted for a smaller overall width */
 }
 
 #timer div {
   text-align: center;
+  flex: 1;
 }
 
 #timer span {
-  font-size: 24px; /* Adjust size as needed */
-  font-weight: bold;
-}
-
-.countdown-title {
-  text-align: center;
-  color: hsl(0, 0%, 100%);
+  display: block;
+  font-size: 2rem; /* Adjusted for a slightly smaller font size */
+  color: var(--white); /* Make numbers white */
+  font-weight: bold; /* Optional: Makes the numbers stand out more */
 }
 
 /*-----------------------------------*\
