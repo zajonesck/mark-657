@@ -1136,19 +1136,21 @@ textarea.contact-input {
   /**
  * SCHEDULE
  */
-
   .schedule .section-title {
     margin-block-end: 20px;
+    text-align: center; /* Ensures title is centered */
   }
 
   .schedule .section-text {
-    margin-block-end: 70px;
+    margin-block-end: 20px; /* Reduced margin for better space utilization on small screens */
+    text-align: center; /* Ensures text is centered */
   }
 
   .schedule-list {
     list-style: none;
     padding: 0;
-    text-align: center; /* Centers the list items */
+    margin: 0 auto; /* Centering the list */
+    max-width: 800px; /* Optional: Limit width to maintain layout integrity on wider screens */
   }
 
   .schedule-item {
@@ -1158,25 +1160,43 @@ textarea.contact-input {
     display: flex;
     justify-content: center; /* Center the date and location horizontally */
     align-items: center; /* Align the date and location vertically */
+    text-align: center;
   }
 
   .schedule-item .date-location {
     display: flex;
-    justify-content: center; /* Ensures inner items are centered */
+    justify-content: space-between; /* Spread the date and location to utilize the available space */
     align-items: center;
-    text-align: center;
+    width: 100%; /* Ensure the container uses full available width */
   }
 
   .schedule-item .date,
   .schedule-item .location {
-    min-width: 120px;
-    padding: 0 5px; /* Adds horizontal padding for spacing */
+    flex: 1; /* Allows each element to grow and fill the space evenly */
+    padding: 0 10px; /* Padding for visual spacing */
   }
 
-  /* Adjusts for small screens */
+  /* Responsive text sizes for smaller devices */
   @media (max-width: 600px) {
+    .schedule-list {
+      max-width: 100%; /* Allows the list to expand to the full width of smaller screens */
+    }
+
     .schedule-item {
-      flex-direction: column; /* Stacks the date and location */
+      flex-direction: column; /* Stack the date and location vertically for better readability */
+    }
+
+    .schedule-item .date-location {
+      flex-direction: column; /* Ensure vertical stacking inside the container */
+      justify-content: center; /* Center align both date and location */
+    }
+
+    .schedule-item .date,
+    .schedule-item .location {
+      flex: none; /* Override any previous flex settings */
+      width: 100%; /* Each takes full width to ensure center alignment */
+      text-align: center; /* Center the text */
+      padding: 5px 0; /* Adjust padding for smaller screens */
     }
   }
 
