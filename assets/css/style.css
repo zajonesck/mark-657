@@ -1134,6 +1134,53 @@ textarea.contact-input {
   }
 
   /**
+ * SCHEDULE
+ */
+
+  .schedule .section-title {
+    margin-block-end: 20px;
+  }
+
+  .schedule .section-text {
+    margin-block-end: 70px;
+  }
+
+  .schedule-list {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Centers the list items */
+  }
+
+  .schedule-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Center the date and location horizontally */
+    align-items: center; /* Align the date and location vertically */
+  }
+
+  .schedule-item .date-location {
+    display: flex;
+    justify-content: center; /* Ensures inner items are centered */
+    align-items: center;
+    text-align: center;
+  }
+
+  .schedule-item .date,
+  .schedule-item .location {
+    min-width: 120px;
+    padding: 0 5px; /* Adds horizontal padding for spacing */
+  }
+
+  /* Adjusts for small screens */
+  @media (max-width: 600px) {
+    .schedule-item {
+      flex-direction: column; /* Stacks the date and location */
+    }
+  }
+
+  /**
    * BLOG
    */
 
