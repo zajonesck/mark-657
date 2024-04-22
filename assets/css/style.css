@@ -1169,12 +1169,12 @@ textarea.contact-input {
 
   .schedule-item {
     padding: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 5px;
     display: flex;
     justify-content: center; /* Center the date and location horizontally */
     align-items: center; /* Align the date and location vertically */
-    text-align: center;
+    text-align: center; /* Centers the text inside the div */
   }
 
   .schedule-item .date-location {
@@ -1192,9 +1192,14 @@ textarea.contact-input {
 
   /* Responsive text sizes for smaller devices */
   @media (max-width: 600px) {
-    .schedule-list {
-      max-width: 100%; /* Allows the list to expand to the full width of smaller screens */
+    .date-location .date,
+    .date-location .location {
+      display: block; /* Make each span take the full width of its container */
+      text-align: center; /* Center-align the text for better aesthetics */
+      margin-bottom: 0.5rem; /* Add some space between the date and the location */
     }
+  }
+  
 
     .schedule-item {
       flex-direction: column; /* Stack the date and location vertically for better readability */
