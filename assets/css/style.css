@@ -189,6 +189,8 @@ html {
   font-size: 10px;
   font-family: var(--ff-open-sans);
   scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -884,6 +886,10 @@ textarea.contact-input {
   /**
    * HEADER
    */
+  .logo {
+    float: left; /* Keeps the logo on the left; remove if logo should be centered */
+    padding-right: 20px; /* Adds some space between the logo and nav links */
+  }
 
   .nav-toggle-btn {
     display: none;
@@ -911,19 +917,14 @@ textarea.contact-input {
     display: flex;
     align-items: center;
     gap: 30px;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent items from wrapping onto multiple lines */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+    font-size: 1.2em; /* Larger text for better visibility */
+    padding: 0 10px; /* Adds padding inside the navbar-list */
   }
 
-  /* Optionally hide the scrollbar for a cleaner design */
-  .navbar-list::-webkit-scrollbar {
-    display: none; /* Works on Chrome, Safari, Opera */
-  }
-
-  .navbar-list {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  .navbar-link {
+    padding: 10px 15px; /* Larger clickable area */
+    text-transform: uppercase; /* Stylistic choice for visibility */
+    font-weight: bold; /* Makes text bolder */
   }
 
   .navbar .btn {
