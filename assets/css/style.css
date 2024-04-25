@@ -806,24 +806,6 @@ textarea.contact-input {
   #MEDIA QUERIES
 \*-----------------------------------*/
 
-/**
- * responsive for larger than 600px screen
- */
-
-@media (min-width: 600px) {
-  /**
-   * PORTFOLIO
-   */
-
-  .portfolio-list li:nth-child(even) .card-content {
-    margin-inline-start: 50%;
-  }
-}
-
-/**
- * responsive for larger than 768px screen
- */
-
 @media (min-width: 768px) {
   /**
    * PORTFOLIO
@@ -887,8 +869,8 @@ textarea.contact-input {
    * HEADER
    */
   .logo {
-    float: left; /* Keeps the logo on the left; remove if logo should be centered */
-    padding-right: 20px; /* Adds some space between the logo and nav links */
+    float: left;
+    padding-right: 20px;
   }
 
   .nav-toggle-btn {
@@ -1167,6 +1149,10 @@ textarea.contact-input {
     max-width: 800px; /* Optional: Limit width to maintain layout integrity on wider screens */
   }
 
+  .schedule-list .schedule-item:nth-child(odd) {
+    color: var(--orange-soda);
+  }
+
   .schedule-item {
     padding: 15px;
     margin-bottom: 20px;
@@ -1191,59 +1177,49 @@ textarea.contact-input {
   }
 
   /* Responsive text sizes for smaller devices */
-  @media (max-width: 600px) {
-    .date-location .date,
-    .date-location .location {
-      display: block; /* Make each span take the full width of its container */
-      text-align: center; /* Center-align the text for better aesthetics */
-      margin-bottom: 0.5rem; /* Add some space between the date and the location */
-    }
-  }
-  
 
-    .schedule-item {
-      flex-direction: column; /* Stack the date and location vertically for better readability */
-    }
-
-    .schedule-item .date-location {
-      flex-direction: column; /* Ensure vertical stacking inside the container */
-      justify-content: center; /* Center align both date and location */
-    }
-
-    .schedule-item .date,
-    .schedule-item .location {
-      flex: none; /* Override any previous flex settings */
-      width: 100%; /* Each takes full width to ensure center alignment */
-      text-align: center; /* Center the text */
-      padding: 5px 0; /* Adjust padding for smaller screens */
-    }
+  .schedule-item {
+    flex-direction: column; /* Stack the date and location vertically for better readability */
   }
 
-  /**
+  .schedule-item .date-location {
+    flex-direction: column; /* Ensure vertical stacking inside the container */
+    justify-content: center; /* Center align both date and location */
+  }
+
+  .schedule-item .date,
+  .schedule-item .location {
+    flex: none; /* Override any previous flex settings */
+    width: 100%; /* Each takes full width to ensure center alignment */
+    text-align: center; /* Center the text */
+    padding: 5px 0; /* Adjust padding for smaller screens */
+  }
+}
+
+/**
    * BLOG
    */
 
-  .blog {
-    padding-block-end: 180px;
-  }
+.blog {
+  padding-block-end: 180px;
+}
 
-  .blog-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-  }
+.blog-list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
 
-  /**
+/**
    * FOOTER
    */
 
-  .footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .copyright,
-  .footer-list {
-    margin-inline: 0;
-  }
+.copyright,
+.footer-list {
+  margin-inline: 0;
 }
