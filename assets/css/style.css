@@ -88,7 +88,7 @@
   padding: 20px 0;
   border-radius: var(--radius-15);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px; /* Add this line */
+  margin-bottom: 30px; 
 }
 
 .countdown-title {
@@ -206,7 +206,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: none;
 }
 
 ::-webkit-scrollbar-track {
