@@ -852,6 +852,7 @@ textarea.contact-input {
   .blog-list {
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
+    margin-bottom: 25px;
   }
 }
 
